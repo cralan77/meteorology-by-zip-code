@@ -5,51 +5,127 @@ import jakarta.persistence.*;
 @Entity
 @Table(name="ZIPCODE")
 public class ZipCode {
-
     @Id
-    private String zipcode;
-    private String street;
-    private String district;
-    private String city;
-    private String stete;
+    private String cep;
+    private String logradouro;
+    private String complemento;
+    private String unidade;
+    private String bairro;
+    private String localidade;
+    private String uf;
+    private String estado;
+    private String regiao;
+    private String ibge;
+    private String gia;
+    private String ddd;
+    private String siafi;
 
-    public String getZipcode() {
-        return zipcode;
+
+    // Getter Methods
+
+    public String getCep() {
+        return cep;
     }
 
-    public void setZipcode(String zipcode) {
-        this.zipcode = zipcode;
+    public String getLogradouro() {
+        return logradouro;
     }
 
-    public String getStreet() {
-        return street;
+    public String getComplemento() {
+        return complemento;
     }
 
-    public void setStreet(String street) {
-        this.street = street;
+    public String getUnidade() {
+        return unidade;
     }
 
-    public String getDistrict() {
-        return district;
+    public String getBairro() {
+        return bairro;
     }
 
-    public void setDistrict(String district) {
-        this.district = district;
+    public String getLocalidade() {
+        return localidade;
     }
 
-    public String getCity() {
-        return city;
+    public String getUf() {
+        return uf;
     }
 
-    public void setCity(String city) {
-        this.city = city;
+    public String getEstado() {
+        return estado;
     }
 
-    public String getStete() {
-        return stete;
+    public String getRegiao() {
+        return regiao;
     }
 
-    public void setStete(String stete) {
-        this.stete = stete;
+    public String getIbge() {
+        return ibge;
+    }
+
+    public String getGia() {
+        return gia;
+    }
+
+    public String getDdd() {
+        return ddd;
+    }
+
+    public String getSiafi() {
+        return siafi;
+    }
+
+    // Setter Methods
+
+    public void setCep(String cep) {
+        this.cep = cep;
+    }
+
+    public void setLogradouro( String logradouro ) {
+        this.logradouro = logradouro;
+    }
+
+    public void setComplemento( String complemento ) {
+        this.complemento = complemento;
+    }
+
+    public void setUnidade( String unidade ) {
+        this.unidade = unidade;
+    }
+
+    public void setBairro( String bairro ) {
+        this.bairro = bairro;
+    }
+
+    public void setLocalidade( String localidade ) {
+        this.localidade = localidade;
+    }
+
+    public void setUf( String uf ) {
+        this.uf = uf;
+    }
+
+    public void setEstado( String estado ) {
+        this.estado = estado;
+    }
+
+    public void setRegiao( String regiao ) {
+        this.regiao = regiao;
+    }
+
+    public void setIbge( String ibge ) {
+        this.ibge = ibge;
+    }
+
+    public void setGia( String gia ) {
+        this.gia = gia;
+    }
+
+    public void setDdd( String ddd ) {
+        this.ddd = ddd;
+    }
+
+    public void setSiafi( String siafi ) {
+        this.siafi = siafi;
     }
 }

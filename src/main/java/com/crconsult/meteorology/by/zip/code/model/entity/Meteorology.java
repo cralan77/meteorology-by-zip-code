@@ -1,6 +1,8 @@
 package com.crconsult.meteorology.by.zip.code.model.entity;
 
 import jakarta.persistence.*;
+import org.hibernate.annotations.JdbcTypeCode;
+import org.hibernate.type.SqlTypes;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -10,30 +12,21 @@ import java.util.Map;
 public class Meteorology {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "id", nullable = false)
-    private Long id;
-
-    private int temperature;
+    private int temp;
     private String date;
     private String time;
     private String description;
     private String currently;
+    @JdbcTypeCode(SqlTypes.JSON)
     private Map<String, String> forecast = new HashMap<String, String>();
 
-    public Long getId() {
-        return id;
+
+    public int getTemp() {
+        return temp;
     }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public int getTemperature() {
-        return temperature;
-    }
-
-    public void setTemperature(int temperature) {
-        this.temperature = temperature;
+    public void setTemp(int temp) {
+        this.temp = temp;
     }
 
     public String getDate() {
