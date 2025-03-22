@@ -11,7 +11,7 @@ public class Forecast {
     private Long id;
 
     @ManyToOne
-    @JoinColumn(name="meteorology_id", nullable=false)
+    @JoinColumn(name="meteorology_id")
     private Meteorology meteorology;
     private String date;
     private String full_date;
