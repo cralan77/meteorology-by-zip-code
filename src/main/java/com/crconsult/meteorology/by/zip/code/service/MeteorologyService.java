@@ -10,12 +10,12 @@ import org.springframework.web.bind.annotation.PathVariable;
 public interface MeteorologyService {
 
     @GetMapping(
-                    "weather?{filterParam}"
+                    "weather?array_limit={arrayLimit}&fields=only_results&key=0a6b31a9&city_name={cityName}"
     )
     Meteorology meteorology(
-             @PathVariable("filterParam") String filterParam
+             @PathVariable("cityName") String filterParam,
+             @PathVariable("arrayLimit") String arrayLimit
             );
-
 
 
 }

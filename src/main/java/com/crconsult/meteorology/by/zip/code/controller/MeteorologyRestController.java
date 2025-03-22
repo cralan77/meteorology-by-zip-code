@@ -23,10 +23,10 @@ public class MeteorologyRestController {
 
 
 
-    @GetMapping("/{zipCode}")
-    public ResponseEntity<Meteorology> consultMeteorologyByZipCode(@PathVariable String zipCode){
+    @GetMapping("/{zipCode}&{forecast}")
+    public ResponseEntity<Meteorology> consultMeteorologyByZipCode(@PathVariable String zipCode, @PathVariable String forecast){
 
-        return ResponseEntity.ok(consulMeteorology.meteorologyByZipCode(zipCodeService.consultZipCode(zipCode)));
+        return ResponseEntity.ok(consulMeteorology.meteorologyByZipCode(zipCodeService.consultZipCode(zipCode), forecast));
     }
 
 }

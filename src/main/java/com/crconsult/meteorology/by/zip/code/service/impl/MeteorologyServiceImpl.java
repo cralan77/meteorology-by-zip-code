@@ -24,13 +24,12 @@ public class MeteorologyServiceImpl implements  ConsulMeteorology {
 
 
     @Override
-    public Meteorology meteorologyByZipCode(ZipCode zipCode) {
+    public Meteorology meteorologyByZipCode(ZipCode zipCode, String forecast) {
 
         //ArrayLimit determina quantidade de dias em forecast
-        int arrayLimit = 5;
-        String filterParam = "city_name="+zipCode.getLocalidade()+","+zipCode.getUf()+ "&array_limit="+arrayLimit+"&fields=only_results,temp,date,time,description,currently,forecast,date,max,min,rain_probability,description&key=0a6b31a9";
-        String nada="";
-        return meteorologyService.meteorology(filterParam);
+
+        String filterParam = zipCode.getLocalidade()+","+zipCode.getUf();
+        return meteorologyService.meteorology(filterParam, forecast);
     }
 
 

@@ -7,5 +7,5 @@ import com.crconsult.meteorology.by.zip.code.service.MeteorologyService;
 public interface ConsulMeteorology  {
 
 
-    Meteorology meteorologyByZipCode(ZipCode zipCode);
+    Meteorology meteorologyByZipCode(ZipCode zipCode, String forecast);
 }
